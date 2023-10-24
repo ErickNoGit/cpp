@@ -76,6 +76,55 @@ void lerNumero(int n) {
     }
 }
 
+void seqFibonacci(int n) {
+    // 7. A série de Fibonacci é uma seqüência de termos que tem como os 2 primeiros termos,
+    // respectivamente, os números 0 e 1. A partir daí, os demais termos são formados seguindo uma
+    // certa regra. A série de Fibonacci pode ser vista a seguir:
+    // 0 1 1 2 3 5 8 13 21...
+    // Descubra a regra que gera a seqüência da série de Fibonacci e escreva um algoritmo que gere
+    // os n (solicitados pelo usuário) primeiros termos desta série e calcula e escreve a soma destes
+    // termos.
+
+    cout << "O número digitado foi " << n << endl;
+    vector<int> v;
+    unsigned int j = 1;
+
+    for (int i = 0; i < n; i++) {
+        // adiciona 0 e 1 depois os demais
+        if (v.size() == 0) {
+            v.push_back(i);
+        } else if (v.size() == 1) {
+            v.push_back(i);
+            v.push_back(i);
+        } else {
+            unsigned int soma = v[i] + v[j];
+            v.push_back(soma);
+            j++;
+        }
+    }
+
+    cout << "Sequencia de Fibonacci :" << endl;
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+    cout << endl;
+}
+
+void gerarNum() {
+    // 8. Gerar 20 números de 1000 a 1999 e escrever aqueles que divididos por 11 dão um resto igual a 5.
+    int contador = 1;
+
+    cout << "Os 20 primeiros numeros de resto 5 entre 1000 a 1999 :" << endl;
+    for (int i = 1000; i <= 1999; i++) {
+        if (contador <= 20) {
+            if (i % 11 == 5) {
+                cout << i << " ";
+                contador++;
+            }   
+        }
+    }
+}
+
 int main() {
     // Questao 1 de exercicio1.txt
     int cem, soma;
@@ -104,8 +153,14 @@ int main() {
     // Questão 5 de exercicio1.txt
     tabuada(4);
 
-    // Questão 5 de exercicio1.txt
+    // Questão 6 de exercicio1.txt
     lerNumero(70);
+
+    // Questão 7 de exercicio1.txt
+    seqFibonacci(30);
+
+    // Questão 8 de exercicio1.txt
+    gerarNum();
 
     return 0;
 }
