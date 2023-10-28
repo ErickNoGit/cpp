@@ -120,9 +120,15 @@ void gerarNum() {
             if (i % 11 == 5) {
                 cout << i << " ";
                 contador++;
-            }   
+            }
         }
     }
+    cout << endl;
+}
+
+void imprimirASC() {
+    // 9. Imprima a tabela ASCII (letra e código decimal correspondente).
+
 }
 
 int main() {
