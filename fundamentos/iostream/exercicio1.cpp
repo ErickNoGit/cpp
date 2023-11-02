@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
@@ -139,8 +140,22 @@ void funcaoRand() {
     // for menor que o gerado, diga “MAIOR”, se for maior diga “MENOR”, e solicite um número
     // ao usuário novamente. Repita este processo até que o usuário acerte o número gerado. Após
     // isso, informe em quantas tentativas o usuário acertou.
-    cout << rand() << endl;
+    const int numAleatorio = rand() % 100;
+    int numUsuario;
+    cout << "Digite um número entre 0 a 100" << endl;
 
+    do {
+        cin >> numUsuario;
+
+        if (numAleatorio == numUsuario) {
+            cout << "Você acertou o número!" << endl;
+            cout << "O número é : " << numAleatorio << endl;
+        } else if (numUsuario < numAleatorio) {
+            cout << "Você deve digitar um número mais acima!" << endl;
+        } else {
+            cout << "Digite um número menor!" << endl;
+        }
+    } while (numUsuario != numAleatorio);
 }
 
 int main() {
