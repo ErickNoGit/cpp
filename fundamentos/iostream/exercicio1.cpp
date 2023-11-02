@@ -128,13 +128,25 @@ void gerarNum() {
 
 void imprimirASC() {
     // 9. Imprima a tabela ASCII (letra e código decimal correspondente).
+    for(int i = 32; i <= 126; i++) {
+        cout << char(i) << ": " << i << endl;
+    }
+}
+
+void funcaoRand() {
+    // 10. Gere um número aleatório inteiro (utilize a função rand()) entre 0 e 100 e solicite um
+    // número ao usuário. O objetivo é que o usuário acerte o número gerado. Se o número digitado
+    // for menor que o gerado, diga “MAIOR”, se for maior diga “MENOR”, e solicite um número
+    // ao usuário novamente. Repita este processo até que o usuário acerte o número gerado. Após
+    // isso, informe em quantas tentativas o usuário acertou.
+    cout << rand() << endl;
 
 }
 
 int main() {
     // Questao 1 de exercicio1.txt
     int cem, soma;
-    cem = 13;
+    cem = 100;
     soma = calculaSoma(cem);
     cout << soma << endl;
 
@@ -157,16 +169,22 @@ int main() {
     cout << "Menor inteiro positivo é: "<< x << endl;
 
     // Questão 5 de exercicio1.txt
-    tabuada(4);
+    tabuada(2);
 
     // Questão 6 de exercicio1.txt
-    lerNumero(70);
+    // lerNumero(70);
 
     // Questão 7 de exercicio1.txt
-    seqFibonacci(30);
+    // seqFibonacci(30);
 
     // Questão 8 de exercicio1.txt
-    gerarNum();
+    // gerarNum();
+
+    // Questão 9 de exercicio1.txt
+    // imprimirASC();
+
+    // Questão 10 de exercicio1.txt
+    funcaoRand();
 
     return 0;
 }
