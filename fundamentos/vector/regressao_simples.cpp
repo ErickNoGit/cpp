@@ -41,7 +41,6 @@ double coeficienteB(double valorA, double mediaX, double mediaY) {
 
 string formRegressao(vector<int> x, vector<int> y) {
 	// Retorna uma string como formula da reta
-
 	// Variáveis básicas Inteiras
  	int tamanhoX = x.size(), tamanhoY = y.size(), somaX = 0, somaY = 0;
 
