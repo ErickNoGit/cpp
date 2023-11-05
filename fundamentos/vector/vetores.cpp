@@ -112,14 +112,22 @@ int main() {
     int y = vetorRes[4];
     cout << "Valor de y: " << y << endl; // indice 4 valor 8
     
+    cout << endl;
+
+    // Tentando colocar tipos de dados diferentes en vetores
+    int vetor3[7] = {1, 2, 3, 4, 5, 6};
+
+    // Colocando caracter
+    vetor3[0] = 'A';
+
+    // Mostrando cada valor do vetor
+    for (int i = 0; i < 6; ++i) {
+        cout << "Valor da posicão " << i << ", : " << vetor3[i] << endl;
+    } // A posição 0 receberá o inteiro 65 ao invẽs do caracter 'A'
+
+    // Tentando colocar string (cadeia de caracter)
+    string nome = "Alves";
+    // vetor3[0] = nome;  // Não há função de conversão adequada de "std::string" para "int"
+
     return 0;
 }
-
-
-
-
-
-
-
-
-
