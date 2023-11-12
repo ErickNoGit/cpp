@@ -82,8 +82,10 @@ string formRegressao(vector<int> x, vector<int> y) {
 
 int main() {
 	// Vetores básico
- 	vector<int> seqX = {1, 2, 3, 4, 5}, seqY = {3, 7, 5, 11, 14};
- 	// resultado = 2,6 * X + 0.2
+ 	vector<int> seqX = {2,  3,  4,  5,  6,  9, 10, 11, 12, 13, 16, 17, 18, 19, 20, 23, 24,
+       25, 26, 27, 30, 31}, seqY = {10,  7,  4,  9,  6, 11, 10, 11,  0,  0, 11, 13,  6,  8, 11, 11, 15,
+       15, 11,  7, 22, 23};
+ 	// resultado =  ŷ ≃ 0.36 · Xᵢ + 4.46 
  	string resultado = formRegressao(seqX, seqY); 
 
  	// editando terminal
