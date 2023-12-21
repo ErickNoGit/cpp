@@ -1,6 +1,6 @@
 # Projeto de Aprendizado em C++
 
-![C++](https://educandocerto.com.br/wp-content/uploads/2022/08/c.jpg)
+![C++](https://i.ytimg.com/vi/GMQj1nm1p_I/maxresdefault.jpg)
 
 ## Introdução
 
@@ -18,8 +18,8 @@
 
 - **fundamentos/**: Contém códigos e materiais introdutórios sobre a sintaxe e conceitos básicos de C++.
 - **objetos/**: Aborda tópicos sobre programação orientada a objetos em C++.
-- **gm/**: Discussões sobre alocação e desalocação de memória.
-- **algoritmos**: Implementações de algoritmos e estruturas de dados comuns em C++.
+- **memoria/**: Discussões sobre alocação e desalocação de memória.
+- **algoritmos/**: Implementações de algoritmos e estruturas de dados comuns em C++.
 
 ## Contribuição
 
