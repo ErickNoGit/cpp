@@ -1,6 +1,7 @@
-/fundamentos/iostream/exercicio
-/fundamentos/vector/regressao
 /.vscode/
-/fundamentos/vector/vetor
-/fundamentos/vector/matrizes
-/fundamentos/vector/pearson
+/fundamentos/iostream/exercicio
+/fundamentos/iostream/output
+/fundamentos/vector/output
+/algoritmos/output
+.o
+.exe

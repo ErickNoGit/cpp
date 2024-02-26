@@ -1,10 +1,11 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <locale.h>
 
 using namespace std;
 
-double calcularMedia(const vector<double>& array) {
+double calcularMedia(const vector<double> &array) {
     double tamanho = array.size(), soma = 0;
     for (double valor : array) {
         soma += valor;
@@ -12,7 +13,8 @@ double calcularMedia(const vector<double>& array) {
     return soma / tamanho;
 }
 
-vector<double> clcDiferenca(const vector<double>& array, double media) {
+
+vector<double> clcDiferenca(const vector<double> &array, double media) {
     vector<double> diferenca;
     for (double valor : array) {
         diferenca.push_back(valor - media);
@@ -20,7 +22,8 @@ vector<double> clcDiferenca(const vector<double>& array, double media) {
     return diferenca;
 }
 
-vector<double> clcQuadradoDiferenca(const vector<double>& array, double media) {
+
+vector<double> clcQuadradoDiferenca(const vector<double> &array, double media) {
     vector<double> quadradoDiferenca;
     for (double valor : array) {
         double diferenca = valor - media;
@@ -29,7 +32,8 @@ vector<double> clcQuadradoDiferenca(const vector<double>& array, double media) {
     return quadradoDiferenca;
 }
 
-double autoSoma(const vector<double>& array) {
+
+double autoSoma(const vector<double> &array) {
     double soma = 0;
     for (double valor : array) {
         soma += valor;
@@ -37,15 +41,18 @@ double autoSoma(const vector<double>& array) {
     return soma;
 }
 
-double clcProdutoSoma(const vector<double>& arrayX, const vector<double>& arrayY) {
+
+double clcProdutoSoma(const vector<double> &arrayX, const vector<double> &arrayY) {
     vector<double> arrayProduto;
-    for (int i = 0; i < arrayX.size(); ++i) {
+    for (unsigned int i = 0; i < arrayX.size(); ++i) {
         arrayProduto.push_back(arrayX[i] * arrayY[i]);
     }
     return autoSoma(arrayProduto);
 }
 
+
 int main() {
+    setlocale(0, "Portuguese");
     vector<double> vetX = {1, 2, 3, 4, 5}, vetY = {3., 5., 6., 7., 9.};
 
     double mediaX = calcularMedia(vetX);
@@ -63,31 +70,32 @@ int main() {
 
     double r = produtoSoma / sqrt(somaQuadradosX * somaQuadradosY); // 0.989949
 
-    cout << "O valor da correlação é de: " << r << endl;
+    cout << "O valor da correlacao: " << r << endl;
 
     return 0;
 }
 
+
 /**
 
-  *  Fórmula desenvolvida pelo Matemático Pearson em Estatítica Aplicada 
+  *  F�rmula desenvolvida pelo Matem�tico Pearson em Estat�tica Aplicada 
   * 
-  * A fórmula para o cálculo da correlação de Pearson entre duas variáveis,
-  * geralmente denotadas como X e Y, é a seguinte:
+  * A f�rmula para o c�lculo da correla��o de Pearson entre duas vari�veis,
+  * geralmente denotadas como X e Y, � a seguinte:
   * 
-  *                 ∑ₙⁱ ⁼ ¹[(Xᵢ - |X) · (Yᵢ - |Y)]
+  *                 ??? ? �[(X? - |X) � (Y? - |Y)]
   * r(XY) = ---------------------------------------------
-  *            √  ∑ₙⁱ ⁼ ¹(Xᵢ  - |X)² ·  ∑ₙⁱ ⁼ ¹(Yᵢ - |Y)²
+  *            ?  ??? ? �(X?  - |X)� �  ??? ? �(Y? - |Y)�
   * 
   * Onde:
-  * n -> é o número de pares de observações.
-  * ∑ representa a soma.
-  * x e y são os valores das duas variáveis (Pertence ao plano R²).
-  * xy é o produto de x e y.
-  * |X é a média de x (Conjunto de valores independentes).
-  * |Y é a média de y (Conjunto de valore dependentes).
+  * n -> � o n�mero de pares de observa��es.
+  * ? representa a soma.
+  * x e y s�o os valores das duas vari�veis (Pertence ao plano R�).
+  * xy � o produto de x e y.
+  * |X � a m�dia de x (Conjunto de valores independentes).
+  * |Y � a m�dia de y (Conjunto de valore dependentes).
   * 
-  * Essa fórmula calcula o coeficiente de correlação r, que varia de -1 a 1. Um valor de 1 indica uma
-  * correlação perfeita positiva, -1 indica uma correlação perfeita negativa, e 0 indica ausência de 
-  * correlação linear entre as variáveis.
+  * Essa f�rmula calcula o coeficiente de correla��o r, que varia de -1 a 1. Um valor de 1 indica uma
+  * correla��o perfeita positiva, -1 indica uma correla��o perfeita negativa, e 0 indica aus�ncia de 
+  * correla��o linear entre as vari�veis.
 */
