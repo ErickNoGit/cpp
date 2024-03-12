@@ -1,45 +1,47 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <locale.h>
 
 using namespace std;
 
 int main() {
+    setlocale(0, "Portuguese_Brazil");
     // Manipulando e criando vetores
     int vet[1]; // vetor de inteiros, vazio, com 1 bloco disponivel
 
     // Acessando valor do vetor
     cout << "Valor do vetor: " << vet[0] << endl;
-    cout << "N√£o √© zero por que ele imprime um valor aleat√≥rio da mem√≥ria!" << endl;
+    cout << "N„o È zero por que ele imprime um valor aleatÛrio da memÛria!" << endl;
 
     cout << endl;
 
     // adicionando valor
     vet[0] = 5;
-    cout << "O vetor recebeu na posi√ß√£o zero o valor: " << vet[0] << endl;
+    cout << "O vetor recebeu na posiÁ„o zero o valor: " << vet[0] << endl;
 
     vet[0] = 2;
-    cout << "Agora tiramos o 5 da posi√ß√£o zero e colocamos o valor: " << vet[0] << endl;
+    cout << "Agora tiramos o 5 da posiÁ„o zero e colocamos o valor: " << vet[0] << endl;
 
     cout << endl;
 
-    // O tamanho do vetor n√£o pode ser alterado e ele √© acessado por indice
+    // O tamanho do vetor n„o pode ser alterado e ele È acessado por indice
     float vet1[5] = {1.3, 2.2, -4.0, .05, 3.1};
  
-    // Vamos acessar o quarto valor, ent√£o √© 4 - 1 que √© 3
+    // Vamos acessar o quarto valor, ent„o È 4 - 1 que È 3
     float quartoValor = vet1[3];
-    cout << "O quarto valor do vetor um √©: " << quartoValor << endl;
+    cout << "O quarto valor do vetor um È: " << quartoValor << endl;
 
-    // Alterando o valor da quarta posi√ß√£o
+    // Alterando o valor da quarta posiÁ„o
     vet1[3] = 3;
-    cout << "O quarto valor agora √©: " << vet1[3] <<  endl;
+    cout << "O quarto valor agora È: " << vet1[3] <<  endl;
 
-    // Vetores do tipo float ou double aceitam inteiros, mas inteiros n√£o aceitam floats ou doublues
+    // Vetores do tipo float ou double aceitam inteiros, mas inteiros n„o aceitam floats ou doublues
     // vamos comparar
     if (vet1[3] == 3.0) {
-        cout << "SIM, o valor : " << vet1[3] << " de vet1[3] √© igual ao float 3.0" << endl; // True
+        cout << "SIM, o valor : " << vet1[3] << " de vet1[3] È igual ao float 3.0" << endl; // True
     } else {
-        cout << "N√ÉO, valor : " << vet1[3] << " de vet1[3] √© diferente do float 3.0" << endl;
+        cout << "N√O, valor : " << vet1[3] << " de vet1[3] È diferente do float 3.0" << endl;
     }
 
     cout << endl;
@@ -47,66 +49,66 @@ int main() {
     // Para usar valores de vetores de n-tamnhos usa-se a biblioteca vector de std::vector
     // Vetor de tamnho especial
     std::vector<string> vetorStrings; // n-tamnho
-    // vetorStrings[0] = "Jo√£o"; // N√£o d√° erro mas da falha na segmenta√ß√£o
-    // vetorStrings[1] = "Maria"; // N√£o d√° erro mas da falha na segmenta√ß√£o
+    // vetorStrings[0] = "Jo„o"; // N„o d· erro mas da falha na segmentaÁ„o
+    // vetorStrings[1] = "Maria"; // N„o d· erro mas da falha na segmentaÁ„o
 
-    // Mostrando posi√ß√µes
+    // Mostrando posiÁıes
     // int j = 0;
     // for (string i: vetorStrings) {
-    //    cout << "Posi√ß√£o " << j << "Nome : " << i << endl; // Error : Falha de segmenta√ß√£o (imagem do n√∫cleo gravada)
+    //    cout << "PosiÁ„o " << j << "Nome : " << i << endl; // Error : Falha de segmentaÁ„o (imagem do n˙cleo gravada)
     //    ++j;
     // }
 
     // Acessando manualmente
-    // cout << "Posi√ß√£o zero: " << vetorStrings[0] << endl;
-    // cout << "Posi√ß√£o um: " << vetorStrings[1] << endl;
-    // cout << "Posi√ß√£o dois: " << vetorStrings[2] << endl;
-    // cout << "Posi√ß√£o tr√™s: " << vetorStrings[3] << endl;
-    // cout << "Posi√ß√£o quantro: " << vetorStrings[4] << endl;
-    // Error : Falha de segmenta√ß√£o (imagem do n√∫cleo gravada)
+    // cout << "PosiÁ„o zero: " << vetorStrings[0] << endl;
+    // cout << "PosiÁ„o um: " << vetorStrings[1] << endl;
+    // cout << "PosiÁ„o dois: " << vetorStrings[2] << endl;
+    // cout << "PosiÁ„o trÍs: " << vetorStrings[3] << endl;
+    // cout << "PosiÁ„o quantro: " << vetorStrings[4] << endl;
+    // Error : Falha de segmentaÁ„o (imagem do n˙cleo gravada)
 
-    // Error : Falha de segmenta√ß√£o (imagem do n√∫cleo gravada)
-    // cout << "Posi√ß√£o zero: " << vetorStrings[0] << endl;
-    // cout << "Posi√ß√£o Um: " << vetorStrings[1] << endl;
+    // Error : Falha de segmentaÁ„o (imagem do n˙cleo gravada)
+    // cout << "PosiÁ„o zero: " << vetorStrings[0] << endl;
+    // cout << "PosiÁ„o Um: " << vetorStrings[1] << endl;
 
     // Vamos tentar um valor fixo de strings
-    vetorStrings = {"Jo√£o", "Maria", "Santos", "Henrique"};
+    vetorStrings = {"Jo„o", "Maria", "Santos", "Henrique"};
 
-    cout << "Tentando acessar o primeiro nome que √©: " << vetorStrings[0] << endl;
+    cout << "Tentando acessar o primeiro nome que È: " << vetorStrings[0] << endl;
 
-    // Acessando todos com la√ßo for
+    // Acessando todos com laÁo for
     int j = 0;
     for (string i : vetorStrings) {
-        cout << "Posi√ß√£o " << j << ", Nome: " << i << endl;
+        cout << "PosiÁ„o " << j << ", Nome: " << i << endl;
         ++j;
     }
     cout << endl;
 
     // Tentando trocar um nome
     vetorStrings[2] = "Lucas";
-    cout << "A posi√ß√£o 2 com nome Santos foi trocado para: " << vetorStrings[2] << endl;
+    cout << "A posiÁ„o 2 com nome Santos foi trocado para: " << vetorStrings[2] << endl;
 
     // Imprimindo todos
     j = 0;
     for (string i : vetorStrings) {
-        cout << "Posi√ß√£o " << j << ", Nome: " << i << endl;
+        cout << "PosiÁ„o " << j << ", Nome: " << i << endl;
         ++j;
     }
     cout << endl;
 
-    // Vamos aplicar aritm√©tica em vetores
+    // Vamos aplicar aritmÈtica em vetores
     int vetorUm[5] = {6, 5, 4, 3, 2}, vetorDois[5] = {2, 3, 4, 5, 6};
-    // vector<int> = vetorUm * vetorDois; // Error : express√£o deve ser do tipo aritm√©tico ou de enumera√ß√£o sem escopo 
+    // vector<int> = vetorUm * vetorDois; // Error : express„o deve ser do tipo aritmÈtico ou de enumeraÁ„o sem escopo 
     int vetorRes[5];
     for (int i = 0; i < 5; ++i) {
-        vetorRes[i] = vetorUm[i] + vetorDois[i]; // acessa o endere√ßo 0, recolhe o valor, opera e armazena
-        cout << "Soma na posi√ß√£o " << i << ", " << vetorUm[i] << " + " << vetorDois[i] << " = " << vetorRes[i] << endl;
+        vetorRes[i] = vetorUm[i] + vetorDois[i]; // acessa o endereÁo 0, recolhe o valor, opera e armazena
+        cout << "Soma na posiÁ„o " << i << ", " << vetorUm[i] << " + " << vetorDois[i] << " = " << vetorRes[i] << endl;
     }
     cout << endl;
 
     // Se eu tentar acessar um valor acima do vetor
     int x = vetorRes[5];
-    cout << "Valor de x: " << x << endl; // tentou acessar um n√∫mero sem prop√≥sito
+    cout << "Valor de x: " << x << endl; // tentou acessar um n˙mero sem propÛsito
 
 
     int y = vetorRes[4];
@@ -122,12 +124,12 @@ int main() {
 
     // Mostrando cada valor do vetor
     for (int i = 0; i < 6; ++i) {
-        cout << "Valor da posic√£o " << i << ", : " << vetor3[i] << endl;
-    } // A posi√ß√£o 0 receber√° o inteiro 65 ao inv·∫Ωs do caracter 'A'
+        cout << "Valor da posic„o " << i << ", : " << vetor3[i] << endl;
+    } // A posiÁ„o 0 receber· o inteiro 65 ao inv?s do caracter 'A'
 
     // Tentando colocar string (cadeia de caracter)
     string nome = "Alves";
-    // vetor3[0] = nome;  // N√£o h√° fun√ß√£o de convers√£o adequada de "std::string" para "int"
+    // vetor3[0] = nome;  // N„o h· funÁ„o de convers„o adequada de "std::string" para "int"
 
     return 0;
 }
